@@ -1,0 +1,20 @@
+{
+    "name": "sistema-pos",
+    "version": "1.0.0",
+    "author": "Juan Sebastian Hoyos Padilla",
+    "license": "ISC",
+    "description": "",
+    "workspaces": [
+        "./backend",
+        "./frontend"
+    ],
+    "scripts": {
+        "backend": "cd ./backend && npm run dev",
+        "frontend": "cd ./frontend && npm run dev",
+        "dev": "concurrently --kill-others-on-fail \"npm run backend\" \"cd ./frontend && npm run dev\""
+    },
+    
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
